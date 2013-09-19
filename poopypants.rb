@@ -8,7 +8,20 @@ end
 post '/' do
   first = request.POST['first']
   last = request.POST['last']
-  redirect to("/#{first}/#{last}")  
+  
+  if first.empty? || last.empty?
+    redirect to("/?q=1")
+  else
+    redirect to("/#{first}/#{last}")
+  end
+end
+
+get '/:first' do
+  redirect to("/")
+end
+
+get '/:first/' do
+  redirect to("/")
 end
 
 get '/:first/:last' do
