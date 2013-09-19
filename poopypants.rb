@@ -5,6 +5,12 @@ get '/' do
   erb :index
 end
 
+post '/' do
+  first = request.POST['first']
+  last = request.POST['last']
+  redirect to("/#{first}/#{last}")  
+end
+
 get '/:first/:last' do
 
   ### PROFESSOR POOPYPANTS NAME CHANGE-O-RUBY-SCRIPT 2000 ###
