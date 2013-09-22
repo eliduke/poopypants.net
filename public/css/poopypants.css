@@ -12,7 +12,7 @@ p.hello {
 	font-size: 175%
 }
 
-p.according {
+p.according, p.another {
 	font-size: 130%
 }
 
