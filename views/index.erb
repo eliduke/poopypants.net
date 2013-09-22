@@ -1,15 +1,15 @@
-<h1>Poopypants!</h1>
+<h1>POOPYPANTS! <img class="smiley" src="/images/hankey.png"></h1>
 
-<%= "<p>You must input at least 2 names.</p>" if params[:q] %>
+<%= "<p class='error'>Poopypants requires a first and last name.</p>" if params[:q] %>
+
+<p>Professor Poopypants wants to know your name.</p>
 
 <form role="form" action="" method="post">
-	<div class="row">
-		<div class="form-group col-sm-6">
-			<input type="text" class="form-control input-lg" name="first" placeholder="First Name" required>
-		</div>
-		<div class="form-group col-sm-6">
-			<input type="text" class="form-control input-lg" name="last" placeholder="Last Name" required>
-		</div>
+	<div class="form-group">
+		<input required type="text" class="form-control input-lg" name="first" placeholder="First Name">
+	</div>
+	<div class="form-group">
+		<input required type="text" class="form-control input-lg" name="last" placeholder="Last Name">
 	</div>
 	<button type="submit" class="btn-lg btn-primary">SUBMIT</button>
 </form>
