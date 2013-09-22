@@ -1,11 +1,6 @@
 body {
 	text-align: center;
 	background: #eee;
-	margin-top: 50px;
-}
-
-button {
-	width: 100%;
 }
 
 p.error {
@@ -13,7 +8,33 @@ p.error {
 	color: #fff;
 }
 
+p.hello {
+	font-size: 175%
+}
+
+p.according {
+	font-size: 130%
+}
+
+p.poopypants {
+	font-size: 225%
+}
+
 img.smiley {
 	width: 40px;
 	margin-top: -10px;
+}
+
+#footer {
+	margin: 20px 5px;
+	padding: 10px 0;
+	border-top: 1px solid #999;
+}
+
+#about p {
+	text-align: left;
+}
+
+#about img {
+	margin-bottom: 10px;
 }
