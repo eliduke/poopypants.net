@@ -6,6 +6,7 @@ body {
 p.error {
 	background-color: #D9534F;
 	color: #fff;
+	font-size: 130%;
 }
 
 p.hello {
