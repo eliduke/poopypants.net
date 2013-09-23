@@ -50,7 +50,7 @@ get '/:first/:last' do
     new_middle  = middles.select{|f| f[0] == middle_letter}[0][1]
     new_last    = lasts.select{|f| f[0]   == last_letter}[0][1]
 
-    erb :poopypants, :locals => { :first => first, :last => last, :new_first => new_first, :new_middle => new_middle, :new_last => new_last }
+    erb :poopypants, :locals => { :first => first.capitalize, :last => last.capitalize, :new_first => new_first, :new_middle => new_middle, :new_last => new_last }
   end
 
 end
