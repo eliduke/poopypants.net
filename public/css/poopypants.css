@@ -5,7 +5,7 @@ body {
 
 p.error {
 	background-color: #D9534F;
-	color: #fff;
+	color: #eee;
 	font-size: 130%;
 }
 
@@ -21,8 +21,17 @@ p.poopypants {
 	font-size: 200%
 }
 
+h2 a {
+	color: #444;
+}
+
+h2 a:hover {
+	color: #444;
+	text-decoration: none;
+}
+
 img.header {
-	width: 40px;
+	width: 30px;
 	margin-top: -10px;
 }
 
