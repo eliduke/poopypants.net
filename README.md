@@ -15,4 +15,4 @@ In January 2012 I decided it was time to take action. As an exercise to improve 
         
 You're welcome, Internet.
 
-![Poopypants's Pocket-Sized \"Name Change-O-Chart 2000\"](http://farm4.staticflickr.com/3031/2908192137_0fa3d51999_z_d.jpg)
+![Poopypants's Pocket-Sized "Name Change-O-Chart 2000"](http://farm4.staticflickr.com/3031/2908192137_0fa3d51999_z_d.jpg)
