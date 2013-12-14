@@ -3,7 +3,7 @@ POOPYPANTS.NET
 
 On September 25th, 2008, I was visiting my brother and sister-in-law in Portland, Oregon. I had to poop, as I am wont to do, so I went to the bathroom like any normal dude. While washing my hands I noticed a peculiar little chart that had been taped on the wall next to the mirror.
 
-[Poopypants's Pocket-Sized "Name Change-O-Chart 2000"](http://farm4.staticflickr.com/3031/2908192137_0fa3d51999_z_d.jpg)
+![Poopypants's Pocket-Sized "Name Change-O-Chart 2000"](http://farm4.staticflickr.com/3031/2908192137_0fa3d51999_z_d.jpg)
         
 As I was drying my hands off, I scanned the chart and figured out my new name according to Professor Poopypants: [Crusty Bubbletush] (http://poopypants.net/eli/duke). I chuckled to myself and then grabbed my camera.
         
