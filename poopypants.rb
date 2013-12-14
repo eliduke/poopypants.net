@@ -1,6 +1,12 @@
 require 'rubygems'
 require 'sinatra'
 
+helpers do
+  def subtitle
+    params[:first] ? "#{params[:first].capitalize} #{params[:last].capitalize} -" : ""
+  end
+end
+
 get '/' do
   erb :index
 end
@@ -16,19 +22,15 @@ post '/' do
   end
 end
 
-get '/about' do
+get '/about/?' do
   erb :about
 end
 
-get '/:first' do
+get '/:first/?' do
   redirect to("/")
 end
 
-get '/:first/' do
-  redirect to("/")
-end
-
-get '/:first/:last' do
+get '/:first/:last/?' do
 
   first = params[:first].gsub(/\W+|\d+|_/, '')
   last  = params[:last].gsub(/\W+|\d+|_/, '')
