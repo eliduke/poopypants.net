@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 
 get '/' do
+  @og_title = "Professor Poopypants 'Name Change-O-Chart 2000'"
   @og_description = "Professor Poopypants's Name 'Change-O-Chart 2000' is your one-stop shop for wacky new names!"
   erb :index
 end
@@ -43,6 +44,7 @@ get '/:first/:last/?' do
     @new_last    = lasts["#{@last[-1].upcase}"]
 
     @subtitle = "#{@first.capitalize} #{@last.capitalize} - "
+    @og_title = "#{@new_first} #{@new_middle}#{@new_last}"
     @og_description = "According to Professor Poopypants's Name 'Change-O-Chart 2000', #{@first.capitalize} #{@last.capitalize}'s WACKY NEW NAME is #{@new_first} #{@new_middle}#{@new_last}!"
     erb :poopypants
   end
