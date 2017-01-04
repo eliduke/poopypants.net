@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.3.1'
 gem 'sinatra'
-gem 'puma', '2.6.0'
+gem 'puma'
+gem 'poopypants'

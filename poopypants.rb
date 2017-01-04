@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'poopypants'
 
 get '/' do
   @og_title = "Professor Poopypants 'Name Change-O-Chart 2000'"
@@ -8,8 +9,8 @@ get '/' do
 end
 
 post '/' do
-  first = request.POST['first'].gsub(/\W+|\d+|_/, '')
-  last = request.POST['last'].gsub(/\W+|\d+|_/, '')
+  first = request.POST['first']
+  last = request.POST['last']
 
   if first.empty? || last.empty?
     redirect to("/?moron=true")
@@ -19,7 +20,7 @@ post '/' do
 end
 
 get '/about/?' do
-  @subtitle = "About - "
+  @subtitle = "About -"
   erb :about
 end
 
@@ -29,23 +30,21 @@ end
 
 get '/:first/:last/?' do
 
-  @first = params[:first].gsub(/\W+|\d+|_/, '')
-  @last  = params[:last].gsub(/\W+|\d+|_/, '')
+  @first = params[:first]
+  @last  = params[:last]
 
   if @first.empty? || @last.empty?
     redirect to("/")
   else
-    firsts  = {"A" => "Stinky", "B" => "Lumpy", "C" => "Buttercup", "D" => "Gidget", "E" => "Crusty", "F" => "Greasy", "G" => "Fluffy", "H" => "Cheeseball", "I" => "Chim-Chim", "J" => "Poopsie", "K" => "Flunky", "L" => "Booger", "M" => "Pinky", "N" => "Zippy", "O" => "Goober", "P" => "Doofus", "Q" => "Slimy", "R" => "Loopy", "S" => "Snotty", "T" => "Falafel", "U" => "Dorky", "V" => "Squeezit", "W" => "Oprah", "X" => "Skipper", "Y" => "Dinky", "Z" => "Zsa-Zsa"}
-    middles = {"A" => "Diaper", "B" => "Toilet", "C" => "Giggle", "D" => "Bubble", "E" => "Girdle", "F" => "Barf", "G" => "Lizard", "H" => "Waffle", "I" => "Cootie", "J" => "Monkey", "K" => "Potty", "L" => "Liver", "M" => "Banana", "N" => "Rhino", "O" => "Burger", "P" => "Hamster", "Q" => "Toad", "R" => "Gizzard", "S" => "Pizza", "T" => "Gerbil", "U" => "Chicken", "V" => "Pickle", "W" => "Chuckle", "X" => "Tofu", "Y" => "Gorilla", "Z" => "Stinker"}
-    lasts   = {"A" => "head", "B" => "mouth", "C" => "face", "D" => "nose", "E" => "tush", "F" => "breath", "G" => "pants", "H" => "shorts", "I" => "lips", "J" => "honker", "K" => "butt", "L" => "brain", "M" => "tushie", "N" => "chunks", "O" => "hiney", "P" => "biscuits", "Q" => "toes", "R" => "buns", "S" => "fanny", "T" => "sniffer", "U" => "sprinkles", "V" => "kisser", "W" => "squirt", "X" => "humperdinck", "Y" => "brains", "Z" => "juice"}
+    name = Poopypants::Name.new(@first, @last)
 
-    @new_first   = firsts["#{@first[0].upcase}"]
-    @new_middle  = middles["#{@last[0].upcase}"]
-    @new_last    = lasts["#{@last[-1].upcase}"]
+    @full_name = "#{name.first.capitalize} #{name.last.capitalize}"
+    @new_name = name.poopify
+    @subtitle = "#{@full_name} is #{@new_name} -"
 
-    @subtitle = "#{@first.capitalize} #{@last.capitalize} - "
-    @og_title = "#{@new_first} #{@new_middle}#{@new_last}"
-    @og_description = "According to Professor Poopypants's Name 'Change-O-Chart 2000', #{@first.capitalize} #{@last.capitalize}'s WACKY NEW NAME is #{@new_first} #{@new_middle}#{@new_last}!"
+    @og_title = @subtitle.split("-").first.strip
+    @og_description = "According to Professor Poopypants' Name 'Change-O-Chart 2000', #{@full_name}'s WACKY NEW NAME is #{@new_name}!"
+
     erb :poopypants
   end
 
