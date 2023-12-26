@@ -1,5 +1,5 @@
 # Use the official Ruby image
-FROM ruby:2.7.2
+FROM ruby:3.2.2
 
 # Set the working directory inside the container
 WORKDIR /app
