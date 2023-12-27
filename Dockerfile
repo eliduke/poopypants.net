@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4567
 
 # Command to run the application
-CMD ["ruby", "poopypants.rb"]
+CMD ["ruby", "poopypants.rb", "-p", "4567", "-o", "0.0.0.0"]
