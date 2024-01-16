@@ -1,15 +1,15 @@
 <% if params[:moron] %>
-	<p class="error">Oops! Try again, Dummy.</p>
+  <p class="error">Oops! Try again, Dummy.</p>
 <% else %>
-	<p class="index">Poopypants wants to know your name.</p>
+  <p class="index">What is your name?</p>
 <% end %>
 
 <form role="form" action="" method="post">
-	<div class="form-group">
-		<input required type="text" class="form-control input-lg" name="first" placeholder="First Name">
-	</div>
-	<div class="form-group">
-		<input required type="text" class="form-control input-lg" name="last" placeholder="Last Name">
-	</div>
-	<button type="submit" class="btn-lg btn-primary btn-block">SUBMIT</button>
+  <div class="form-group">
+    <input required type="text" class="form-control input-lg" name="first" placeholder="First Name">
+  </div>
+  <div class="form-group">
+    <input required type="text" class="form-control input-lg" name="last" placeholder="Last Name">
+  </div>
+  <button type="submit" class="btn-lg btn-primary btn-block">SUBMIT</button>
 </form>

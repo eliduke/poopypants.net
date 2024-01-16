@@ -3,7 +3,7 @@
   <head>
     <title><%= @subtitle %> POOPYPANTS.NET - Professor Poopypants's "Name Change-O-Chart 2000"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/css/poopypants.css" rel="stylesheet" media="screen">
 
@@ -16,31 +16,31 @@
     <meta property="og:description" content="<%= @og_description %>" />
     <meta property="og:type" content="article" />
 
-		<script>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-44211034-1', 'poopypants.net');
       ga('send', 'pageview');
-		</script>
+    </script>
 
   </head>
   <body>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h2><a href="/"><img class="header" src="/images/poop.png"> POOPYPANTS <img class="header" src="/images/poop.png"></a></h2>
-					<%= yield %>
-					<div id="footer">
-						<ul class="list-inline">
-							<li><a href="/">home</a></li>
-							<li><a href="/about">about</a></li>
-							<li><a href="http://eliduke.com" target="_blank">eliduke.com</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2><a href="/"><img class="header" src="/images/poop.png"> POOPYPANTS <img class="header" src="/images/poop.png"></a></h2>
+          <%= yield %>
+          <div id="footer">
+            <ul class="list-inline">
+              <li><a href="/">home</a></li>
+              <li><a href="/about">about</a></li>
+              <li><a href="http://eliduke.com" target="_blank">eliduke.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
