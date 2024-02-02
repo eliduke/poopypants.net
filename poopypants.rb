@@ -11,11 +11,7 @@ post '/' do
   first = request.POST['first'].strip
   last = request.POST['last'].strip
 
-  if first.empty? || last.empty?
-    redirect to("/?moron=true")
-  else
-    redirect to("/#{first.capitalize}/#{last.capitalize}")
-  end
+  redirect to("/#{first}/#{last}")
 end
 
 get '/about/?' do
@@ -29,20 +25,21 @@ end
 
 get '/:first/:last/?' do
 
-  @first = params[:first]
-  @last  = params[:last]
+  first = params[:first]
+  last  = params[:last]
 
-  if @first.empty? || @last.empty?
+  # contains numbers?
+  if (first + last) =~ /\d/
     redirect to("/")
   else
-    name = Poopypants::Name.new(@first, @last)
+    name = Poopypants::Name.new(first, last)
 
-    @full_name = "#{name.first.capitalize} #{name.last.capitalize}"
+    @full_name = "#{first} #{last}"
     @new_name = name.poopify
     @subtitle = "#{@full_name} is #{@new_name} -"
 
     @og_title = @subtitle.split("-").first.strip
-    @og_description = "According to Professor Poopypants' Name 'Change-O-Chart 2000', #{@full_name}'s WACKY NEW NAME is #{@new_name}!"
+    @og_description = "According to Professor Poopypants, #{@full_name}'s wacky new name is #{@new_name}!"
 
     erb :poopypants
   end
