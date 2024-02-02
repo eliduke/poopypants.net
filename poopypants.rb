@@ -36,9 +36,9 @@ get '/:first/:last/?' do
 
     @full_name = "#{first} #{last}"
     @new_name = name.poopify
-    @subtitle = "#{@full_name} is #{@new_name} -"
+    @subtitle = "#{@full_name} is #{@new_name} •"
 
-    @og_title = @subtitle.split("-").first.strip
+    @og_title = @subtitle.split("•").first.strip
     @og_description = "According to Professor Poopypants, #{@full_name}'s wacky new name is #{@new_name}!"
 
     erb :poopypants
