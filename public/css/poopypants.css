@@ -20,7 +20,7 @@ p.index {
   color: #666;
 }
 
-p.according, p.another { font-size: 130% }
+p.according, p.another { font-size: 170% }
 
 p.poopypants { font-size: 200% }
 
@@ -48,9 +48,9 @@ p.poopypants { font-size: 200% }
     padding: 10px 10px 15px 10px;
   }
 
-  p.according, p.another { font-size: 250% }
+  p.according, p.another { font-size: 230% }
 
-  p.poopypants { font-size: 400%; }
+  p.poopypants { font-size: 250%; }
 
   p {
     font-size: 150%;
@@ -87,7 +87,7 @@ p.poopypants { font-size: 200% }
 
   p.according, p.another { font-size: 300% }
 
-  p.poopypants { font-size: 500%; }
+  p.poopypants { font-size: 350%; }
 
   p {
     font-size: 200%;
@@ -124,7 +124,7 @@ p.poopypants { font-size: 200% }
 
   p.according, p.another { font-size: 350% }
 
-  p.poopypants { font-size: 600%; }
+  p.poopypants { font-size: 450%; }
 
   p {
     font-size: 200%;
