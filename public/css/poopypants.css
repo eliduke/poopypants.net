@@ -1,11 +1,13 @@
 body {
+  padding-top: 15px;
   text-align: center;
   background: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 h2 {
-  font-size: 300%;
-  margin-bottom: 10px;
+  font-size: 220%;
+  margin-bottom: 20px;
 }
 
 h2 a { color: #333 }
@@ -20,8 +22,8 @@ p.index {
   color: #666;
 }
 
+p.hey { font-size: 200%; margin-bottom: 25px }
 p.according, p.another { font-size: 170% }
-
 p.poopypants { font-size: 200% }
 
 .input-lg { text-align: center }
@@ -36,7 +38,7 @@ p.poopypants { font-size: 200% }
 
 @media (min-width: 768px) {
 
-  h2 { font-size: 500% }
+  h2 { font-size: 300% }
 
   p.index {
     font-size: 300%;
@@ -48,7 +50,7 @@ p.poopypants { font-size: 200% }
     padding: 10px 10px 15px 10px;
   }
 
-  p.according, p.another { font-size: 230% }
+  p.according, p.another { font-size: 230%; font-weight: 300 }
 
   p.poopypants { font-size: 250%; }
 
@@ -72,7 +74,7 @@ p.poopypants { font-size: 200% }
 
 @media (min-width: 992px) {
 
-  h2 { font-size: 600% }
+  h2 { font-size: 400% }
 
   p.index {
     font-size: 350%;
@@ -110,7 +112,7 @@ p.poopypants { font-size: 200% }
 
 @media (min-width: 1200px) {
 
-  h2 { font-size: 800% }
+  h2 { font-size: 500% }
 
   p.index {
     font-size: 420%;
@@ -122,8 +124,8 @@ p.poopypants { font-size: 200% }
     padding: 10px 10px 20px 10px;
   }
 
-  p.according, p.another { font-size: 350% }
-
+  p.hey { font-size: 400% }
+  p.according, p.another { font-size: 400% }
   p.poopypants { font-size: 450%; }
 
   p {
@@ -143,5 +145,4 @@ p.poopypants { font-size: 200% }
   }
 
   .btn-lg { font-size: 400%; }
-
 }

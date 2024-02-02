@@ -8,8 +8,8 @@ get '/' do
 end
 
 post '/' do
-  first = request.POST['first']
-  last = request.POST['last']
+  first = request.POST['first'].strip
+  last = request.POST['last'].strip
 
   if first.empty? || last.empty?
     redirect to("/?moron=true")
