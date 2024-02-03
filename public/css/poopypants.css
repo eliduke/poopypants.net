@@ -72,7 +72,7 @@ p.poopypants { font-size: 200% }
     font-size: 250%;
   }
 
-  .btn-lg { font-size: 250%; }
+  .btn-lg { font-size: 200%; }
 
 @media (min-width: 992px) {
 
@@ -109,7 +109,7 @@ p.poopypants { font-size: 200% }
     font-size: 300%;
   }
 
-  .btn-lg { font-size: 300%; }
+  .btn-lg { font-size: 250%; }
 }
 
 @media (min-width: 1200px) {
@@ -146,5 +146,5 @@ p.poopypants { font-size: 200% }
     font-size: 300%;
   }
 
-  .btn-lg { font-size: 400%; }
+  .btn-lg { font-size: 300%; }
 }
