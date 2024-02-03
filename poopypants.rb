@@ -15,7 +15,7 @@ post '/' do
 end
 
 get '/about/?' do
-  @subtitle = "About -"
+  @og_title = "About - Professor Poopypants 'Name Change-O-Chart 2000'"
   erb :about
 end
 
@@ -36,9 +36,8 @@ get '/:first/:last/?' do
 
     @full_name = "#{first} #{last}"
     @new_name = name.poopify
-    @subtitle = "#{@full_name} is #{@new_name} •"
 
-    @og_title = @subtitle.split("•").first.strip
+    @og_title = "#{@full_name} is #{@new_name}"
     @og_description = "According to Professor Poopypants, #{@full_name}'s wacky new name is #{@new_name}!"
 
     erb :poopypants
