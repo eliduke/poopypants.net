@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'poopypants'
 
-use Rack::Protection::HostAuthorization, permitted_hosts: ["localhost", "poopypants.net"]
+disable :protection
 
 get '/' do
   @og_title = "Professor Poopypants 'Name Change-O-Chart 2000'"
