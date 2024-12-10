@@ -1,8 +1,8 @@
 require 'sinatra'
 require 'poopypants'
 
-configure :development, :production do
-  use Rack::Protection::HostAuthorization, permitted_hosts: ["localhost", "poopypants.net"]
+configure do
+  disable :protection
 end
 
 get '/' do
