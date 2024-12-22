@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'poopypants'
 
+set :environment, :production
+
 get '/' do
   @og_title = "Professor Poopypants 'Name Change-O-Chart 2000'"
   @og_description = "Professor Poopypants's Name 'Change-O-Chart 2000' is your one-stop shop for wacky new names!"
