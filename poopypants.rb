@@ -27,16 +27,16 @@ end
 
 get '/:first/:last/?' do
 
-  first = params[:first]
-  last  = params[:last]
+  @first = params[:first]
+  @last  = params[:last]
 
   # contains numbers?
-  if (first + last) =~ /\d/
+  if (@first + @last) =~ /\d/
     redirect to("/")
   else
-    name = Poopypants::Name.new(first, last)
+    name = Poopypants::Name.new(@first, @last)
 
-    @full_name = "#{first} #{last}"
+    @full_name = "#{@first} #{@last}"
     @new_name = name.poopify
 
     @og_title = "#{@full_name} is #{@new_name}"
